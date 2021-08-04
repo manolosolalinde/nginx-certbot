@@ -20,11 +20,19 @@ application.
 
 4. Run the init script:
 
-        ./init-letsencrypt.sh
+```bash
+export MYDOMAIN="myexampledomain.org"
+export MYDOMAINS="myexampledomain.org www.myexampledomain.org"
+cp ./data/nginx/app.example.conf ./data/nginx/app.conf
+sed -i "s/example.org/${MYDOMAIN}/" ./data/nginx/app.conf
+./init-letsencrypt.sh
+```
 
 5. Run the server:
 
-        docker-compose up
+```bash
+docker-compose up
+```
 
 ## Got questions?
 Feel free to post questions in the comment section of the [accompanying guide](https://medium.com/@pentacent/nginx-and-lets-encrypt-with-docker-in-less-than-5-minutes-b4b8a60d3a71)
