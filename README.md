@@ -23,7 +23,7 @@ application.
 ```bash
 export MYDOMAIN="myexampledomain.org"
 export MYDOMAINS="myexampledomain.org www.myexampledomain.org"
-cp ./data/nginx/app.example.conf ./data/nginx/app.conf
+cp ./data/app.example.conf ./data/nginx/app.conf
 sed -i "s/example.org/${MYDOMAIN}/" ./data/nginx/app.conf
 ./init-letsencrypt.sh
 ```
