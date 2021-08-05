@@ -78,3 +78,10 @@ echo
 
 echo "### Reloading nginx ..."
 docker-compose exec nginx nginx -s reload
+
+
+echo "test: ${MYDOMAIN}"
+echo "PRIVATE KEY: $PWD/data/certbot/conf/live/$MYDOMAIN/privkey.pem"
+echo "Fullchain: $PWD/data/certbot/conf/live/$MYDOMAIN/fullchain.pem"
+
+./create_env_vars.sh

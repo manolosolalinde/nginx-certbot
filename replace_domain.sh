@@ -1,5 +1,5 @@
 #!/bin/bash
-cp ./data/nginx/app.example.conf ./data/nginx/app.conf
+cp ./data/app.example.conf ./data/nginx/app.conf
 sed -i "s/example.org/${MYDOMAIN}/" ./data/nginx/app.conf
 
 # #!/bin/bash

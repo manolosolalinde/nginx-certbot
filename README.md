@@ -21,10 +21,13 @@ application.
 4. Run the init script:
 
 ```bash
+#initial configuration
 export MYDOMAIN="myexampledomain.org"
 export MYDOMAINS="myexampledomain.org www.myexampledomain.org"
 cp ./data/app.example.conf ./data/nginx/app.conf
 sed -i "s/example.org/${MYDOMAIN}/" ./data/nginx/app.conf
+
+#initialization script
 ./init-letsencrypt.sh
 ```
 
